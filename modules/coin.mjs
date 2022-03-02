@@ -106,9 +106,9 @@ function flipACoin(call) {
   }
 
   return {
-    call,
-    flip,
-    result
+    call: call,
+    flip: flip,
+    result: result
   }
 }
 
@@ -117,3 +117,4 @@ function flipACoin(call) {
  * 
  * Export all of your named functions
 */
+export { coinFlip, coinFlips, countFlips, flipACoin }

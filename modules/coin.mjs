@@ -38,12 +38,11 @@
  */
 
 export function coinFlips(flips) {
-  let array = [];
+  let flips_array = [];
   for (var i = 0; i < flips; i++){
-    let flip = coinFlip();
-    array[i] = flip;
+    flips_array[i] = coinFlip();
   }
-  return array;
+  return flips_array;
 }
 
 
@@ -61,22 +60,22 @@ export function coinFlips(flips) {
  */
 
 export function countFlips(array) {
-  let h_count = 0;
-  let t_count = 0;
+  let heads = 0;
+  let tails = 0;
   for (var i = 0; i < array.length; i++) {
     if (array[i] == 'heads') {
-      h_count ++;
+      heads ++;
     } else if (array[i] == 'tails') {
-      t_count ++;
+      tails ++;
     }
   }
-  if (h_count == 0) {
-    return {"tails": t_count};
+  if (heads == 0) {
+    return {"tails": tails};
   }
-  else if (t_count == 0) {
-    return {"heads": h_count};
+  else if (tails == 0) {
+    return {"heads": heads};
   }
-  return {"heads": h_count, "tails": t_count};
+  return {"heads": heads, "tails": tails};
 }
   
 
@@ -93,14 +92,14 @@ export function countFlips(array) {
  */
 
 export function flipACoin(call) {
-  let c_flip = coinFlip();
-  let final_result = "";
-  if (c_flip = call){
-    final_result = "win";
+  let flip = coinFlip();
+  let result = "";
+  if (flip = call){
+    result = "win";
   }else if(c_flip != call){
-    final_result = "lose";
+    result = "lose";
   }
-  return {"call": call, "flip": c_flip, "result": final_result};
+  return {"call": call, "flip": flip, "result": result};
 }
 
 
